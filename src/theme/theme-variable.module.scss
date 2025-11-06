@@ -1,0 +1,10 @@
+/* --el-color-primary 主题色修改位置 ./element-varible.scss || ./element-dark.scss*/
+:root {
+  /* --el-color-primary:#45c2b5;*/
+  --systemThemeColor: var(--el-color-primary);
+ 
+}
+/*暗黑模式*/
+html.dark {
+
+}

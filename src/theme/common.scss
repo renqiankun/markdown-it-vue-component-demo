@@ -1,0 +1,55 @@
+/*全局样式配置*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html,
+#app {
+  width: 100vw;
+  // min-width: 1400px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  min-height: 400px;
+  overflow-y: hidden;
+}
+body {
+  overflow: hidden;
+  font-size: 16px; // 基础字体大小
+}
+html {
+  &.dark {
+  }
+}
+
+.clearFix::after {
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  clear: both;
+}
+.clearFix {
+  zoom: 1;
+}
+.text-center {
+  text-align: center;
+} /* 新增 */ /* 滚动调样式 */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+} /*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); */ /* background-color: #fff; */ /* border-radius: 1px; */
+} /*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); */
+  background-color: #cacbcd;
+  &:hover {
+    background-color: #aaacae;
+  }
+} /*定义右下角汇合处的样式*/
+::-webkit-scrollbar-corner {
+  background: khaki;
+}

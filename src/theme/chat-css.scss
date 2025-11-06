@@ -1,0 +1,33 @@
+body {
+  // 左侧边栏背景色
+  --chat-side-bg: #f9fbff;
+
+  // 输入框背景色
+  --chat-input-bg: transparent;
+  --chat-input-border: rgba(0, 0, 0, 0.3);
+  // 输入框文字颜色
+  --chat-input-text: #000;
+  // 输入框文字大小
+  --chat-input-text-size: 16px;
+  // 用户问题背景色
+  --user-question-bg-color: #d8d0ff;
+  // 用户问题文字色
+  --user-question-text-color: #000;
+
+  // 返回的推理内容文字颜色
+  --answer-reason-text-color: #ffffffb5;
+  
+}
+
+.md-editor-dark {
+  --md-color: #000;
+  --md-bk-color: transparent;
+  fill:#000;
+  .md-editor-preview{
+    --md-theme-border-color:#999;
+    p{
+      margin: 8px 0;
+    }
+  }
+}
+
