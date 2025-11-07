@@ -74,7 +74,7 @@ const renderHtml = (markdownText: string) => {
 }
 
 onMounted(() => {
-  renderHtml('# Hello Markdown')
+  renderHtml('# Hello Markdown <my-component> { "type": "Hello" } </my-component> ')
 })
 ```
 
