@@ -93,11 +93,7 @@ onMounted(() => {
       <!-- 普通 HTML 段 -->
       <div v-if="item.type === 'html'" v-html="item.content"></div>
       <!-- Vue 组件段 -->
-      <component
-        v-if="item.type === 'component'"
-        :is="item.component"
-        v-bind="item.props"
-      ></component>
+      <component v-if="item.type === 'component'" :is="item.component" v-bind="item.props" ></component>
     </template>
   </div>
 </template>
