@@ -145,7 +145,7 @@ Each segment object has the following structure:
   id: string | number,
   content?: string,            // Content for HTML segment
   component?: any,             // Vue component
-  props?: any                  // Props for the component
+  props?: { [key: string]: any ,_isComplete?: boolean}  // Props for the component
 }
 ```
 

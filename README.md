@@ -144,7 +144,7 @@ const segments = md.getSegments(html)
   id: string | number,
   content?: string,            // html 段的内容
   component?: any,             // Vue 组件
-  props?: any                  // 组件的 props
+  props?: { [key: string]: any ,_isComplete?: boolean}// 组件的 props
 }
 ```
 
