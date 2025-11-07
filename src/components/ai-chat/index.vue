@@ -82,7 +82,7 @@ const init = async () => {
   console.log(list.length)
   //  messages.value[0].content += list
   for (var i of list.split('')) {
-    await sleepHand(1)
+    await sleepHand(20)
     messages.value[0].content += i
   }
 }
