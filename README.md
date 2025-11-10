@@ -2,8 +2,8 @@
 
 # markdown-it-vue-component
 
-> 一个基于 Markdown-it 的插件，用于在 Markdown 中渲染 Vue 组件，支持流式渲染和自定义占位符。
-
+> 一个基于 Markdown-it 的插件，用于在 Markdown 中渲染vue react 组件，支持流式渲染和自定义占位符。,c此为vue demo
+ 
 #### [github](https://github.com/renqiankun/markdown-it-vue-component-demo)
 #### [demo](https://renqiankun.github.io/markdown-it-vue-component-demo/dist/)
 ---
