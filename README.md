@@ -162,7 +162,7 @@ const segments = md.getSegments(html)
 
 ## 注意事项
 
-- 插件依赖 Vue 3 与 Markdown-it
+- 插件依赖 Markdown-it
 - propsUseJson: true 时，如果 JSON 解析失败，会将数据作为字符串传入
 - 流式渲染场景下，可通过 renderIntermediate 控制组件未完成数据接收时的占位行为
 - 每一个内容展示区域为一个markdown-it的实例

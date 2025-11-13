@@ -165,7 +165,7 @@ Each segment object has the following structure:
 
 ## Notes
 
-- This plugin depends on Vue 3 and Markdown-it  
+- This plugin depends on Markdown-it  
 - If `propsUseJson` is true and JSON parsing fails, data will be passed as a string  
 - In streaming rendering, `renderIntermediate` controls the placeholder behavior before the data is complete  
 - Each display area uses a separate Markdown-it instance
