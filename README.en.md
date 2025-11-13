@@ -11,17 +11,26 @@
 ---
 
 
+
 ## Features
 
-- **Embed Anything**: Seamlessly insert any custom Vue component directly into your Markdown.
-- **JSON-Powered Props**: Easily pass data to your components using clean JSON.
-- **Smooth Loading States**: Display elegant placeholders and loading indicators while data is streaming.
-- **Segmented Output**: Get a structured list of HTML and component segments for advanced rendering control.
-- **Plays Well with Others**: A pure `markdown-it` plugin, ensuring full compatibility with the existing ecosystem.
-- **Easily Adaptable**: Simple to modify for use with other `markdown-it` based component libraries.
-- **Vue-Native Performance**: Leverages Vue's native diffing for highly efficient DOM updates.
-- **Flexible HTML Mode**: Works flawlessly with or without `markdown-it`'s HTML mode enabled.
-- **Smart Caching**: Boosts performance and stability by caching components and preventing unnecessary prop updates after data is fully loaded.
+* **Powerful Componentization**
+  * **Inject Any Component**: Seamlessly render any custom Vue or React component inside Markdown — breaking free from static text limitations.  
+  * **HTML-like Syntax**: Use intuitive `<tag>...</tag>` syntax with full support for attributes, self-closing (`<tag />`), and implicit self-closing tags (`<img>`, `<input>`). Extremely low learning curve.  
+  * **Flexible Data Passing**: Supports passing tag content as plain text or JSON strings (auto-parsed via option), enabling true data-driven rendering.
+
+* **Streaming-First Design**
+  * **Graceful Loading Placeholders**: During streaming, you can show loading states or pre-render components to avoid flicker and layout shifts — delivering a smooth user experience.  
+  * **Intelligent State Awareness**: Components are aware of whether the data stream has finished, enabling post-stream actions like syntax highlighting or chart rendering.  
+  * **Performance Locking**: Once streaming is complete, component props are intelligently frozen to prevent redundant re-renders, ensuring performance and stability.
+
+* **Structured Output**
+  * **`getSegments` API**: Splits the render result into **HTML fragments** and **component mount points**, compatible with both Vue and React renderers.
+
+* **High Compatibility**
+  * **Based on markdown-it**: Integrates cleanly without breaking core markdown-it behavior or other plugins.  
+  * **Dual-Mode Support**: Works consistently whether the markdown-it `html` option is enabled or disabled.  
+  * **Easily Extensible**: Clear and modular architecture — can be adapted to other markdown-it-based component systems with minimal effort.
 
 
 ---

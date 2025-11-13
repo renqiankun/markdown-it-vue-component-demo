@@ -23,10 +23,12 @@ import customComponentPlugin, {
   type MDVueComponentOptions,
   type SegmentsResultItem
 } from 'markdown-it-vue-component'
-import myComponent from '@/components/my-component.vue'
 import echartCom from '@/components/echart/index.vue'
-import myTable from '@/components/ele-table/index.vue'
 import { ref, shallowRef, watch } from 'vue'
+
+import myImg from '@/components/my-img.vue'
+import myCard from '@/components/my-card.vue'
+import myTable from '@/components/ele-table/index.vue'
 const props = withDefaults(
   defineProps<{
     data: string
@@ -34,35 +36,34 @@ const props = withDefaults(
   {}
 )
 
-const md = markdownIt()
+const md = markdownIt({
+  // html: false,     
+})
 // 完整配置
 md.use(customComponentPlugin, {
-  debug: false,
-  propsKey: '_data',
-  placeholderClass: 'custom-placeholder',
   components: {
-    'my-component': {
+    'my-card': {
       // component参数在内部无任何处理，生成segments原样返回，可传字符串，自己匹配组件。
-      component: shallowRef(myComponent),
+      component: shallowRef(myCard),
       renderIntermediate: false,
       propsUseJson: true,
       multipleProps: true,
       propsKey: '_data',
       placeholderClass: 'custom-placeholder'
     } as MDVueComponentOptions,
-    // echarts
     echart: {
       component: shallowRef(echartCom),
       propsUseJson: true,
-      propsKey: 'data',
+      propsKey: 'data'
     },
-    // 表格
     'my-table': {
       component: shallowRef(myTable),
       propsUseJson: true,
-      propsKey: 'data',
+      propsKey: 'data'
     },
-    
+    img: {
+      component: shallowRef(myImg)
+    }
   }
 })
 
