@@ -54,19 +54,19 @@ const init = async () => {
 
 ### echarts组件
 \`\`\`markdown
-<echart>
+<my-chart>
 [
   {"name":"Line 1","type":"line","data":[220,302,181,234,210,290,150]},
   {"name":"Line 2","type":"line","data":[120,202,281,271,230,220,130]}
 ]
-</echart>
+</my-chart>
 \`\`\`
-<echart>
+<my-chart>
 [
   {"name":"Line 1","type":"line","data":[220,302,181,234,210,290,150]},
   {"name":"Line 2","type":"line","data":[120,202,281,271,230,220,130]}
 ]
-</echart>
+</my-chart>
 
 -
 ### element-plus table组件
@@ -136,8 +136,8 @@ md.use(customComponentPlugin, {
       propsKey: '_data',
       placeholderClass: 'custom-placeholder'
     },
-    echart: {
-      component: shallowRef(echartCom),
+    my-chart: {
+      component: shallowRef(myChart),
       propsUseJson: true,
       propsKey: 'data',
     },

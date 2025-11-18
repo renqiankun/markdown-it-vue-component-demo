@@ -23,12 +23,11 @@ import customComponentPlugin, {
   type MDVueComponentOptions,
   type SegmentsResultItem
 } from 'markdown-it-vue-component'
-import echartCom from '@/components/echart/index.vue'
 import { ref, shallowRef, watch } from 'vue'
-
+import myChart from '@/components/my-chart.vue'
 import myImg from '@/components/my-img.vue'
 import myCard from '@/components/my-card.vue'
-import myTable from '@/components/ele-table/index.vue'
+import myTable from '@/components/my-table.vue'
 const props = withDefaults(
   defineProps<{
     data: string
@@ -43,16 +42,12 @@ const md = markdownIt({
 md.use(customComponentPlugin, {
   components: {
     'my-card': {
-      // component参数在内部无任何处理，生成segments原样返回，可传字符串，自己匹配组件。
       component: shallowRef(myCard),
-      renderIntermediate: false,
       propsUseJson: true,
       multipleProps: true,
-      propsKey: '_data',
-      placeholderClass: 'custom-placeholder'
     } as MDVueComponentOptions,
-    echart: {
-      component: shallowRef(echartCom),
+    'my-chart': {
+      component: shallowRef(myChart),
       propsUseJson: true,
       propsKey: 'data'
     },
